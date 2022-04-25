@@ -23,9 +23,44 @@ class Model{
         }
     }
     
+    func CheckLastZero(){
+        if(!isNumber(text: caculationArray.last!)){
+            //確保數字已經打完
+            if(caculationArray.contains(".")){
+                let lastNonNUmString = caculationArray.last
+                caculationArray.removeLast()
+                //暫時刪除非文字的最後一項
+                for _ in 1...caculationArray.count-1{
+                    if(caculationArray.last=="0"){
+                        caculationArray.removeLast()
+                    }
+                }
+                caculationArray.append(lastNonNUmString!)
+            }
+        }
+    }
+    func CheckLastDot(){
+        if(!isNumber(text: caculationArray.last!)){
+            //確保數字已經打完
+            if(caculationArray.contains(".")){
+                caculationArray.remove(at: caculationArray.firstIndex(of: ".")!)
+            }
+        }
+            
+    }
+    func CheckOneDot(){
+        if(caculationArray.last == "."){
+            if(caculationArray.firstIndex(of: ".") != caculationArray.count-1){
+                //小數點在之前出現過
+                caculationArray.removeLast()
+            }
+        }
+        
+    }
     func CheckFirstZero(){
         if(caculationArray[0]=="0" && caculationArray.count>1){
-            if(isNumber(text: caculationArray[1])){
+            if(isNumber(text: caculationArray[1]) && (caculationArray[1]) != "."){
+                //小數點設定為num一部分 所以要另加條件
                 for i in stride(from: 0, to: caculationArray.count-1, by: 1){
                     caculationArray[i] = caculationArray[i+1]
                 }
@@ -33,6 +68,13 @@ class Model{
             }
             
         }
+    }
+
+    func Check(){
+        CheckOneDot()
+        CheckFirstZero()
+        CheckLastZero()
+        CheckLastDot()
     }
     
     //################
@@ -84,7 +126,7 @@ class Model{
         if(caculationArray.count==0){
             //初始狀態直接append
             caculationArray.append(currentTitle)
-            CheckFirstZero()
+            Check()
             Array2String(inputArray: caculationArray)
 //            return caculationText;
         }else{
@@ -92,14 +134,14 @@ class Model{
             if(isNumber(text: caculationArray.last!)==isNumber(text: currentTitle) && isNumber(text: currentTitle)==false){ //
                 //若前兩個元素皆不是num 則指替換最後項元素
                 caculationArray[caculationArray.count-1] = currentTitle
-                CheckFirstZero()
+                Check()
                 // 更新last值
                 Array2String(inputArray: caculationArray)
 //                return caculationText;
                 
             }else{
                 caculationArray.append(currentTitle)
-                CheckFirstZero()
+                Check()
                 Array2String(inputArray: caculationArray)
 //                return caculationText;
             }
