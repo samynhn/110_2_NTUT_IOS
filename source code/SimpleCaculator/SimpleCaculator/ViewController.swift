@@ -25,8 +25,10 @@ class ViewController: UIViewController {
     @IBAction func clean(_ sender: UIButton) {
         if(model.ClearState(clearText: sender.currentTitle!)==1){//  c 且 last==nonNum
             sender.setTitle("AC", for: UIControl.State.normal)
+            sender.backgroundColor =  #colorLiteral(red: 0.9371655583, green: 0.2847693861, blue: 0.5117737055, alpha: 1);
         }else{
             sender.setTitle("C", for: UIControl.State.normal)
+            sender.backgroundColor =  #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1);
         }
         
         updateView()
@@ -44,7 +46,7 @@ class ViewController: UIViewController {
 //            //last not num
 //            sender.setTitle("AC", for: UIControl.State.normal);
 //            sender.backgroundColor =  #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1);
-//
+
 //        }
         
     }
@@ -75,6 +77,7 @@ class ViewController: UIViewController {
     }
     
     func updateView(){
+       
         Caculation.text = model.caculationText
     }
     

@@ -23,6 +23,21 @@ class Model{
         }
     }
     
+    func CheckFirstZero(){
+        if(caculationArray[0]=="0" && caculationArray.count>1){
+            if(isNumber(text: caculationArray[1])){
+                for i in stride(from: 0, to: caculationArray.count-1, by: 1){
+                    caculationArray[i] = caculationArray[i+1]
+                }
+                caculationArray.removeLast()
+            }
+            
+        }
+    }
+    
+    //################
+    
+    
     func ClearStateIsC(state: String) -> Bool{
         if state=="C"{
             return true
@@ -69,23 +84,27 @@ class Model{
         if(caculationArray.count==0){
             //初始狀態直接append
             caculationArray.append(currentTitle)
+            CheckFirstZero()
             Array2String(inputArray: caculationArray)
 //            return caculationText;
         }else{
             //非初始狀態
             if(isNumber(text: caculationArray.last!)==isNumber(text: currentTitle) && isNumber(text: currentTitle)==false){ //
                 //若前兩個元素皆不是num 則指替換最後項元素
-                caculationArray[caculationArray.count-1] = currentTitle//
+                caculationArray[caculationArray.count-1] = currentTitle
+                CheckFirstZero()
                 // 更新last值
                 Array2String(inputArray: caculationArray)
 //                return caculationText;
                 
             }else{
                 caculationArray.append(currentTitle)
+                CheckFirstZero()
                 Array2String(inputArray: caculationArray)
 //                return caculationText;
             }
         }
+        
     }
     func Array2String(inputArray : [String]){
         caculationText = ""
