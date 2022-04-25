@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		325A5AB527E8411200252066 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A5AB427E8411200252066 /* AppDelegate.swift */; };
+		325A5AB727E8411200252066 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A5AB627E8411200252066 /* SceneDelegate.swift */; };
+		325A5AB927E8411200252066 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A5AB827E8411200252066 /* ViewController.swift */; };
+		325A5ABC27E8411200252066 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325A5ABA27E8411200252066 /* Main.storyboard */; };
+		325A5ABE27E8411500252066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325A5ABD27E8411500252066 /* Assets.xcassets */; };
+		325A5AC127E8411500252066 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325A5ABF27E8411500252066 /* LaunchScreen.storyboard */; };
+		325A5ACC27E8411500252066 /* SimpleCaculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A5ACB27E8411500252066 /* SimpleCaculatorTests.swift */; };
+		325A5AD627E8411500252066 /* SimpleCaculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A5AD527E8411500252066 /* SimpleCaculatorUITests.swift */; };
+		325A5AD827E8411500252066 /* SimpleCaculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325A5AD727E8411500252066 /* SimpleCaculatorUITestsLaunchTests.swift */; };
+		740812E628167E3B00DD33F7 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740812E528167E3B00DD33F7 /* Button.swift */; };
+		740812E828167E5500DD33F7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740812E728167E5500DD33F7 /* Model.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		325A5AC827E8411500252066 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 325A5AA927E8411200252066 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 325A5AB027E8411200252066;
+			remoteInfo = SimpleCaculator;
+		};
+		325A5AD227E8411500252066 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 325A5AA927E8411200252066 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 325A5AB027E8411200252066;
+			remoteInfo = SimpleCaculator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		325A5AB127E8411200252066 /* SimpleCaculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleCaculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		325A5AB427E8411200252066 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		325A5AB627E8411200252066 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		325A5AB827E8411200252066 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		325A5ABB27E8411200252066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		325A5ABD27E8411500252066 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		325A5AC027E8411500252066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		325A5AC227E8411500252066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		325A5AC727E8411500252066 /* SimpleCaculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleCaculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		325A5ACB27E8411500252066 /* SimpleCaculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCaculatorTests.swift; sourceTree = "<group>"; };
+		325A5AD127E8411500252066 /* SimpleCaculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleCaculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		325A5AD527E8411500252066 /* SimpleCaculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCaculatorUITests.swift; sourceTree = "<group>"; };
+		325A5AD727E8411500252066 /* SimpleCaculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCaculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		740812E528167E3B00DD33F7 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		740812E728167E5500DD33F7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		325A5AAE27E8411200252066 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		325A5AC427E8411500252066 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		325A5ACE27E8411500252066 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		325A5AA827E8411200252066 = {
+			isa = PBXGroup;
+			children = (
+				325A5AB327E8411200252066 /* SimpleCaculator */,
+				325A5ACA27E8411500252066 /* SimpleCaculatorTests */,
+				325A5AD427E8411500252066 /* SimpleCaculatorUITests */,
+				325A5AB227E8411200252066 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		325A5AB227E8411200252066 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				325A5AB127E8411200252066 /* SimpleCaculator.app */,
+				325A5AC727E8411500252066 /* SimpleCaculatorTests.xctest */,
+				325A5AD127E8411500252066 /* SimpleCaculatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		325A5AB327E8411200252066 /* SimpleCaculator */ = {
+			isa = PBXGroup;
+			children = (
+				325A5AB427E8411200252066 /* AppDelegate.swift */,
+				325A5AB627E8411200252066 /* SceneDelegate.swift */,
+				325A5AB827E8411200252066 /* ViewController.swift */,
+				740812E528167E3B00DD33F7 /* Button.swift */,
+				740812E728167E5500DD33F7 /* Model.swift */,
+				325A5ABA27E8411200252066 /* Main.storyboard */,
+				325A5ABD27E8411500252066 /* Assets.xcassets */,
+				325A5ABF27E8411500252066 /* LaunchScreen.storyboard */,
+				325A5AC227E8411500252066 /* Info.plist */,
+			);
+			path = SimpleCaculator;
+			sourceTree = "<group>";
+		};
+		325A5ACA27E8411500252066 /* SimpleCaculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				325A5ACB27E8411500252066 /* SimpleCaculatorTests.swift */,
+			);
+			path = SimpleCaculatorTests;
+			sourceTree = "<group>";
+		};
+		325A5AD427E8411500252066 /* SimpleCaculatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				325A5AD527E8411500252066 /* SimpleCaculatorUITests.swift */,
+				325A5AD727E8411500252066 /* SimpleCaculatorUITestsLaunchTests.swift */,
+			);
+			path = SimpleCaculatorUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		325A5AB027E8411200252066 /* SimpleCaculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 325A5ADB27E8411500252066 /* Build configuration list for PBXNativeTarget "SimpleCaculator" */;
+			buildPhases = (
+				325A5AAD27E8411200252066 /* Sources */,
+				325A5AAE27E8411200252066 /* Frameworks */,
+				325A5AAF27E8411200252066 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleCaculator;
+			productName = SimpleCaculator;
+			productReference = 325A5AB127E8411200252066 /* SimpleCaculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		325A5AC627E8411500252066 /* SimpleCaculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 325A5ADE27E8411500252066 /* Build configuration list for PBXNativeTarget "SimpleCaculatorTests" */;
+			buildPhases = (
+				325A5AC327E8411500252066 /* Sources */,
+				325A5AC427E8411500252066 /* Frameworks */,
+				325A5AC527E8411500252066 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				325A5AC927E8411500252066 /* PBXTargetDependency */,
+			);
+			name = SimpleCaculatorTests;
+			productName = SimpleCaculatorTests;
+			productReference = 325A5AC727E8411500252066 /* SimpleCaculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		325A5AD027E8411500252066 /* SimpleCaculatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 325A5AE127E8411500252066 /* Build configuration list for PBXNativeTarget "SimpleCaculatorUITests" */;
+			buildPhases = (
+				325A5ACD27E8411500252066 /* Sources */,
+				325A5ACE27E8411500252066 /* Frameworks */,
+				325A5ACF27E8411500252066 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				325A5AD327E8411500252066 /* PBXTargetDependency */,
+			);
+			name = SimpleCaculatorUITests;
+			productName = SimpleCaculatorUITests;
+			productReference = 325A5AD127E8411500252066 /* SimpleCaculatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		325A5AA927E8411200252066 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					325A5AB027E8411200252066 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					325A5AC627E8411500252066 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 325A5AB027E8411200252066;
+					};
+					325A5AD027E8411500252066 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 325A5AB027E8411200252066;
+					};
+				};
+			};
+			buildConfigurationList = 325A5AAC27E8411200252066 /* Build configuration list for PBXProject "SimpleCaculator" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 325A5AA827E8411200252066;
+			productRefGroup = 325A5AB227E8411200252066 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				325A5AB027E8411200252066 /* SimpleCaculator */,
+				325A5AC627E8411500252066 /* SimpleCaculatorTests */,
+				325A5AD027E8411500252066 /* SimpleCaculatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		325A5AAF27E8411200252066 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325A5AC127E8411500252066 /* LaunchScreen.storyboard in Resources */,
+				325A5ABE27E8411500252066 /* Assets.xcassets in Resources */,
+				325A5ABC27E8411200252066 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		325A5AC527E8411500252066 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		325A5ACF27E8411500252066 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		325A5AAD27E8411200252066 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				740812E828167E5500DD33F7 /* Model.swift in Sources */,
+				325A5AB927E8411200252066 /* ViewController.swift in Sources */,
+				325A5AB527E8411200252066 /* AppDelegate.swift in Sources */,
+				325A5AB727E8411200252066 /* SceneDelegate.swift in Sources */,
+				740812E628167E3B00DD33F7 /* Button.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		325A5AC327E8411500252066 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325A5ACC27E8411500252066 /* SimpleCaculatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		325A5ACD27E8411500252066 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325A5AD627E8411500252066 /* SimpleCaculatorUITests.swift in Sources */,
+				325A5AD827E8411500252066 /* SimpleCaculatorUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		325A5AC927E8411500252066 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 325A5AB027E8411200252066 /* SimpleCaculator */;
+			targetProxy = 325A5AC827E8411500252066 /* PBXContainerItemProxy */;
+		};
+		325A5AD327E8411500252066 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 325A5AB027E8411200252066 /* SimpleCaculator */;
+			targetProxy = 325A5AD227E8411500252066 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		325A5ABA27E8411200252066 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				325A5ABB27E8411200252066 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		325A5ABF27E8411500252066 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				325A5AC027E8411500252066 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		325A5AD927E8411500252066 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		325A5ADA27E8411500252066 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		325A5ADC27E8411500252066 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpleCaculator/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = deyi.SimpleCaculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		325A5ADD27E8411500252066 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpleCaculator/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = deyi.SimpleCaculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		325A5ADF27E8411500252066 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = deyi.SimpleCaculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleCaculator.app/SimpleCaculator";
+			};
+			name = Debug;
+		};
+		325A5AE027E8411500252066 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = deyi.SimpleCaculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleCaculator.app/SimpleCaculator";
+			};
+			name = Release;
+		};
+		325A5AE227E8411500252066 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = deyi.SimpleCaculatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SimpleCaculator;
+			};
+			name = Debug;
+		};
+		325A5AE327E8411500252066 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = deyi.SimpleCaculatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SimpleCaculator;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		325A5AAC27E8411200252066 /* Build configuration list for PBXProject "SimpleCaculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				325A5AD927E8411500252066 /* Debug */,
+				325A5ADA27E8411500252066 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		325A5ADB27E8411500252066 /* Build configuration list for PBXNativeTarget "SimpleCaculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				325A5ADC27E8411500252066 /* Debug */,
+				325A5ADD27E8411500252066 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		325A5ADE27E8411500252066 /* Build configuration list for PBXNativeTarget "SimpleCaculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				325A5ADF27E8411500252066 /* Debug */,
+				325A5AE027E8411500252066 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		325A5AE127E8411500252066 /* Build configuration list for PBXNativeTarget "SimpleCaculatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				325A5AE227E8411500252066 /* Debug */,
+				325A5AE327E8411500252066 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 325A5AA927E8411200252066 /* Project object */;
+}
