@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MatchingGame{
+struct MatchingGame{ // change class to struct
     //copy by reference
     var cards: Array<Card> = [Card]()
     var indexOfOneAnsOnlyFaceUpCard: Int?
@@ -36,8 +36,8 @@ class MatchingGame{
     func getRandomThemeIndex(themeArray: Dictionary<Int, Array<String>>)->Int{
         return Int(arc4random_uniform(UInt32(themeArray.count)))
     }
-    
-    func getRandomTheme(index: Int)->(String,Array<String>){
+    // add mutating
+    mutating func getRandomTheme(index: Int)->(String,Array<String>){
         themeName = themeNameArray[index]
         if theme[index] != nil{
             randomTheme = theme[index]!
@@ -45,7 +45,7 @@ class MatchingGame{
         return (themeName,randomTheme)
     }
     
-    func chooseCard(at index: Int){
+    mutating func chooseCard(at index: Int){
 //        if cards[index].isFaceUp{
 //            cards[index].isFaceUp = false
 //        }else{
@@ -85,7 +85,7 @@ class MatchingGame{
         }
     }
 
-    func reset(){
+    mutating func reset(){
         for index in cards.indices{
             cards[index].isFaceUp = false
             cards[index].isMatched = false
@@ -99,7 +99,7 @@ class MatchingGame{
         }
     }
     
-    func flipAll(){
+    mutating func flipAll(){
         var _isFaceUpIndexArray = Array<Int>()
 //        gameScore -= 1000
         fCount = 0
@@ -146,7 +146,7 @@ class MatchingGame{
        
     var emojiDict = Dictionary<Int, String>()
     
-    func emoji(for card: Card)-> String{
+    mutating func emoji(for card: Card)-> String{
         if emojiDict[card.identifier] == nil,randomTheme.count>0 {
             let randomIndex = Int(arc4random_uniform(UInt32(randomTheme.count)))
             emojiDict[card.identifier] = randomTheme.remove(at: randomIndex)

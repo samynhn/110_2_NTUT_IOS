@@ -43,7 +43,14 @@ class Model{
         if(!isNumber(text: caculationArray.last!)){
             //確保數字已經打完
             if(caculationArray.contains(".")){
-                caculationArray.remove(at: caculationArray.firstIndex(of: ".")!)
+                let lastNonNUmString = caculationArray.last
+                caculationArray.removeLast()
+                //暫時刪除非文字的最後一項
+                if(caculationArray.last=="."){
+                    caculationArray.remove(at: caculationArray.firstIndex(of: ".")!)
+                }
+                caculationArray.append(lastNonNUmString!)
+                
             }
         }
             
