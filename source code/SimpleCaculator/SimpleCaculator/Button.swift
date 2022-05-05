@@ -13,6 +13,7 @@ struct Button{
     var type : String?
     var isClicked = false
     var identifier:Int // useID, not emoji
+    var text:String?
     
     static var identifierFactory = 0
     static func getUniqueldentifier()->Int{

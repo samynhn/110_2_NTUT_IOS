@@ -80,6 +80,10 @@
                                         <integer key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="ConnectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5dO-VE-WJq"/>
+                                    <action selector="buttonclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lsA-eQ-7pv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqT-2h-86K">
                                 <rect key="frame" x="200" y="268" width="80" height="93"/>
@@ -95,6 +99,10 @@
                                         <integer key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="ConnectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eqc-O0-LEE"/>
+                                    <action selector="buttonclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sgr-8f-l8f"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsE-hN-2T1">
                                 <rect key="frame" x="301" y="377" width="80" height="93"/>
@@ -129,6 +137,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="ConnectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VuL-y8-spK"/>
                                     <action selector="buttonclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PkC-66-N2u"/>
                                 </connections>
                             </button>
@@ -147,6 +156,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="ConnectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="22g-Eq-aNc"/>
                                     <action selector="buttonclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2a8-WF-NDE"/>
                                 </connections>
                             </button>
@@ -165,6 +175,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="ConnectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vw6-eS-wYV"/>
                                     <action selector="buttonclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0DH-ko-Chf"/>
                                 </connections>
                             </button>
@@ -201,6 +212,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="ConnectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3V7-hG-nYg"/>
                                     <action selector="buttonclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yno-zc-atu"/>
                                 </connections>
                             </button>
@@ -219,6 +231,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="ConnectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nbc-8F-eUP"/>
                                     <action selector="buttonclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fmF-RE-nT9"/>
                                 </connections>
                             </button>
@@ -237,6 +250,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="ConnectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YUa-A9-Nbb"/>
                                     <action selector="buttonclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zXg-7h-exA"/>
                                 </connections>
                             </button>
@@ -273,6 +287,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="ConnectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cpx-wR-36x"/>
                                     <action selector="buttonclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VO8-s7-dbt"/>
                                 </connections>
                             </button>
@@ -291,6 +306,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="ConnectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hEg-gN-kDE"/>
                                     <action selector="buttonclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rix-0x-0me"/>
                                 </connections>
                             </button>
@@ -309,6 +325,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="ConnectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sea-Sy-1Js"/>
                                     <action selector="buttonclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hml-Uf-9Tx"/>
                                 </connections>
                             </button>
@@ -345,6 +362,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="ConnectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RIo-qo-LGS"/>
                                     <action selector="buttonclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dex-Bq-ymI"/>
                                 </connections>
                             </button>
@@ -363,6 +381,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="ConnectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YsQ-hP-W1h"/>
                                     <action selector="buttonclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ibS-e5-4rU"/>
                                 </connections>
                             </button>
@@ -373,6 +392,24 @@
                     <connections>
                         <outlet property="Answer" destination="ij0-Q6-G8v" id="f3L-yj-dPd"/>
                         <outlet property="Caculation" destination="12X-oY-gpT" id="n8G-LE-r3g"/>
+                        <outletCollection property="numButton" destination="4oK-SN-BVe" collectionClass="NSMutableArray" id="SXJ-mx-pos"/>
+                        <outletCollection property="numButton" destination="nfZ-oV-z3Q" collectionClass="NSMutableArray" id="qEV-4w-7eh"/>
+                        <outletCollection property="numButton" destination="Fid-0h-e2F" collectionClass="NSMutableArray" id="7gV-AR-mAU"/>
+                        <outletCollection property="numButton" destination="EMZ-Eg-ub5" collectionClass="NSMutableArray" id="nW8-rW-8J3"/>
+                        <outletCollection property="numButton" destination="L8L-7f-WtN" collectionClass="NSMutableArray" id="47H-gZ-cIy"/>
+                        <outletCollection property="numButton" destination="xLy-ll-nnY" collectionClass="NSMutableArray" id="mRZ-Fd-MWb"/>
+                        <outletCollection property="numButton" destination="g6g-ON-Qco" collectionClass="NSMutableArray" id="ykk-Tf-psl"/>
+                        <outletCollection property="numButton" destination="sAc-qn-KAX" collectionClass="NSMutableArray" id="Jhi-b1-S1I"/>
+                        <outletCollection property="numButton" destination="xE9-Mn-lsf" collectionClass="NSMutableArray" id="CrL-JE-gY3"/>
+                        <outletCollection property="numButton" destination="Scd-oa-d20" collectionClass="NSMutableArray" id="MNx-zb-lz0"/>
+                        <outletCollection property="numButton" destination="cJc-7Q-C7v" collectionClass="NSMutableArray" id="UxQ-eK-Tgz"/>
+                        <outletCollection property="numButton" destination="D8G-Lh-bQ5" collectionClass="NSMutableArray" id="5HW-DX-CoU"/>
+                        <outletCollection property="numButton" destination="hqT-2h-86K" collectionClass="NSMutableArray" id="F9h-I3-cud"/>
+                        <outletCollection property="numButton" destination="vr5-S0-Yec" collectionClass="NSMutableArray" id="U7k-F4-QTu"/>
+                        <outletCollection property="numButton" destination="lsE-hN-2T1" collectionClass="NSMutableArray" id="z71-pv-cT0"/>
+                        <outletCollection property="numButton" destination="heV-YN-VB7" collectionClass="NSMutableArray" id="myB-Ja-Rfe"/>
+                        <outletCollection property="numButton" destination="CYs-wd-ZBF" collectionClass="NSMutableArray" id="8NI-6V-JMo"/>
+                        <outletCollection property="numButton" destination="kqA-Om-tBC" collectionClass="NSMutableArray" id="ET3-aj-hDh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

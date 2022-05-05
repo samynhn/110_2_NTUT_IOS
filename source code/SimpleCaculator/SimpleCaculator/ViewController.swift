@@ -9,18 +9,33 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    
+    @IBOutlet var numButton: [UIButton]!
+    
     lazy var model:Model = Model(numOfButton: 19)
     
     var buttonArray : Array<Button> = [Button]()
     var caculationArray : Array<String> = [String]()
     var fItem = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //do not change the sort
+        setText()
+        setType()
+        
         // Do any additional setup after loading the view.
+    }
+    
+    
+    @IBAction func ConnectButton(_ sender: UIButton) {
+        
     }
     
     @IBOutlet weak var Caculation: UILabel!
     @IBOutlet weak var Answer: UILabel!
+    
     
     @IBAction func clean(_ sender: UIButton) {
         if(model.ClearState(clearText: sender.currentTitle!)==1){//  c 且 last==nonNum
@@ -60,25 +75,80 @@ class ViewController: UIViewController {
 //    }
     
     @IBAction func buttonclick(_ sender: UIButton) {
+        let numButtonIndex = numButton.firstIndex(of: sender)!
+        model.setIsClicked(index: numButtonIndex) // set which button been clicked
+//        model.setType(index: numButtonIndex)
+            
         model.CaculationShowText(currentTitle: sender.currentTitle!)
         updateView()
         //
-//        Caculation.text = Caculation.text! + sender.currentTitle!
+
         
-        sender.backgroundColor =  #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1);
+//        sender.backgroundColor =  #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1);
     }
     
     
     @IBAction func execute(_ sender: Any) {
+//        model.execute()
         let _caculation = Caculation.text!
         let expression = NSExpression(format: _caculation)
         let value = expression.expressionValue(with: nil, context: nil) as?Int
         Answer.text = value?.description
+        
+        updateView()
+    }
+    
+    func setType(){
+        for index in numButton.indices { // cardButtons is buttonArray
+            if(model.buttons[index].text != nil){
+                model.setType(index: index)
+            }
+        }
+    }
+    func setText(){
+        for index in numButton.indices {
+            if(numButton[index].currentTitle != nil){
+                model.buttons[index].text = numButton[index].currentTitle!
+            }
+        }
     }
     
     func updateView(){
        
         Caculation.text = model.caculationText
+        
+        for index in numButton.indices { // cardButtons is buttonArray
+            let UInumButton = numButton[index] // let button be a element in buttonArray
+            let modelNumButton = model.buttons[index] // let card be a element in cardArray
+            
+//            modelNumButton.text = UInumButton.currentTitle!
+            
+            
+
+            
+            if modelNumButton.isClicked {
+                
+                if (modelNumButton.type=="num"){
+                    UInumButton.backgroundColor =  #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1);
+                }else if(modelNumButton.type=="opera"){
+                    UInumButton.backgroundColor =  #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1);
+                }else{
+                    UInumButton.backgroundColor =  #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1);
+                }
+                
+            }else{
+                
+                if (modelNumButton.type=="num"){
+                    UInumButton.backgroundColor =  #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1);
+                }else if(modelNumButton.type=="opera"){
+                    UInumButton.backgroundColor =  #colorLiteral(red: 1, green: 0.5835773945, blue: 0, alpha: 1);
+                }else{
+                    UInumButton.backgroundColor =  #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1);
+                }
+            }
+        }
+        
+        
     }
     
 //    func CaculationShowText(_ sender: UIButton){

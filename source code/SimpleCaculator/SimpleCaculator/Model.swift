@@ -23,6 +23,47 @@ class Model{
         }
     }
     
+    func isLegal()->Bool{
+        return true
+    }
+    func execute(){
+        // if "=" button isclicked==true, remove all text in Caculation Label
+        if(isLegal()){ // ensure caculation label isLeagal to execute
+            caculationText = ""
+            caculationArray.removeAll()
+        }
+    }
+    func setType(index : Int){
+        let text = buttons[index].text
+        
+        if(nonNumArray.contains(text!)){
+            if(text=="/" || text=="*" || text=="-" || text=="+"){
+                buttons[index].type = "opera"
+            }else{
+                buttons[index].type = "spec"
+            }
+            
+        }else{
+            buttons[index].type = "num"
+        }
+    
+    }
+    
+    func setIsClicked(index : Int){
+        for i in buttons.indices{
+            buttons[i].isClicked = false
+        }
+        if(index < 0){
+           
+        }else{
+            buttons[index].isClicked = true
+        }
+        
+    }
+    
+    
+    //###############
+    
     func CheckLastZero(){
         if(!isNumber(text: caculationArray.last!)){
             //確保數字已經打完
@@ -94,7 +135,19 @@ class Model{
             return false
         }
     }
-     
+    func ClearHighlight(state: Int){
+        if(state == 0){ // all isclicked = false
+            setIsClicked(index: -1)
+        }else{
+            for index in buttons.indices {
+                if(buttons[index].text == caculationArray.last){
+                    setIsClicked(index: index)
+                }
+            }
+        }
+        
+        
+    }
     func ClearState(clearText : String) -> Int{ // 傳入AC/C
         if(caculationArray.count==0){
             return 0
@@ -103,12 +156,15 @@ class Model{
             if(!isNumber(text: caculationArray.last!)){
                 return 1 //  c 且 last==nonNum
             }else{
-                caculationArray.removeLast()//  最後一個圍數字時
+                caculationArray.removeLast()//  最後一個為數字時
+                ClearHighlight(state: 1)
+//                setIsClicked(index: index)
                 Array2String(inputArray: caculationArray)
                 return 2
             }
             
         }else{
+            ClearHighlight(state: 0)
             caculationArray.removeAll()
             Array2String(inputArray: caculationArray)
             return 3

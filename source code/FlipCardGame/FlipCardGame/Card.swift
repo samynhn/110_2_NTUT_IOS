@@ -7,18 +7,28 @@
 
 import Foundation
 
-struct Card{
+struct Card : Hashable{
+    
+    var hashValue: Int{
+        return identifier
+    }
+    static func == (lhs: Card, rhs: Card) -> Bool {
+        return lhs.identifier == rhs.identifier
+    }
+    
     //ues struct when var are pure-value-type
     //copy by value
     var isFaceUp = false
     var isMatched = false
-    var identifier:Int // useID, not emoji
+    private var identifier:Int // useID, not emoji
     
     static var identifierFactory = 0
     static func getUniqueldentifier()->Int{
         identifierFactory += 1
         return identifierFactory
     }
+    
+    
     init(){
         self.identifier = Card.getUniqueldentifier()
     }

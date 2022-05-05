@@ -63,9 +63,9 @@ class ViewController: UIViewController {
     }
     
     func updateViewFromModel(){
-        for index in cardButtons.indices {
-            let button = cardButtons[index]
-            let card = game.cards[index]
+        for index in cardButtons.indices { // cardButtons is buttonArray
+            let button = cardButtons[index] // let button be a element in buttonArray
+            let card = game.cards[index] // let card be a element in cardArray
             if card.isFaceUp {
                 button.setTitle(game.emoji(for: card), for: UIControl.State.normal)
                 button.backgroundColor = card.isMatched ? #colorLiteral(red: 0, green: 0.4780646563, blue: 0.9985368848, alpha: 0.2046771523) : #colorLiteral(red: 0, green: 0.594068706, blue: 0.9980753064, alpha: 1)

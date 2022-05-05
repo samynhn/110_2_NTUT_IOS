@@ -54,7 +54,7 @@ struct MatchingGame{ // change class to struct
         if !cards[index].isMatched{
             if let matchIndex = indexOfOneAnsOnlyFaceUpCard, matchIndex != index{ // indexOfOneAnsOnlyFaceUpCardu has value and matchIndex != index then true
                 
-                if cards[matchIndex].identifier == cards[index].identifier{// if emoji are same
+                if cards[matchIndex] == cards[index]{// if emoji are same
                     cards[matchIndex].isMatched = true
                     cards[index].isMatched = true
                     cards[matchIndex].isFaceUp = true
@@ -144,16 +144,17 @@ struct MatchingGame{ // change class to struct
            
     }
        
-    var emojiDict = Dictionary<Int, String>()
+//    var emojiDict = Dictionary<Int, String>()
+    var emojiDict = [Card:String]()
     
     mutating func emoji(for card: Card)-> String{
-        if emojiDict[card.identifier] == nil,randomTheme.count>0 {
+        if emojiDict[card] == nil,randomTheme.count>0 {
             let randomIndex = Int(arc4random_uniform(UInt32(randomTheme.count)))
-            emojiDict[card.identifier] = randomTheme.remove(at: randomIndex)
+            emojiDict[card] = randomTheme.remove(at: randomIndex)
         }
         
         
-        return emojiDict[card.identifier] ?? "?"
+        return emojiDict[card] ?? "?"
     }
     
     init(numberOfPairsOfCards: Int){
