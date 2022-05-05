@@ -31,6 +31,7 @@ class Model{
         if(isLegal()){ // ensure caculation label isLeagal to execute
             caculationText = ""
             caculationArray.removeAll()
+            setIsClicked(index: -1)
         }
     }
     func setType(index : Int){
@@ -135,6 +136,7 @@ class Model{
             return false
         }
     }
+    
     func ClearHighlight(state: Int){
         if(state == 0){ // all isclicked = false
             setIsClicked(index: -1)
@@ -145,8 +147,6 @@ class Model{
                 }
             }
         }
-        
-        
     }
     func ClearState(clearText : String) -> Int{ // 傳入AC/C
         if(caculationArray.count==0){

@@ -89,7 +89,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func execute(_ sender: Any) {
-//        model.execute()
+        model.execute()
         let _caculation = Caculation.text!
         let expression = NSExpression(format: _caculation)
         let value = expression.expressionValue(with: nil, context: nil) as?Int
@@ -132,6 +132,8 @@ class ViewController: UIViewController {
                     UInumButton.backgroundColor =  #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1);
                 }else if(modelNumButton.type=="opera"){
                     UInumButton.backgroundColor =  #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1);
+                }else if (modelNumButton.text=="="){
+                    UInumButton.backgroundColor =  #colorLiteral(red: 1, green: 0.5835773945, blue: 0, alpha: 1);
                 }else{
                     UInumButton.backgroundColor =  #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1);
                 }
@@ -141,6 +143,8 @@ class ViewController: UIViewController {
                 if (modelNumButton.type=="num"){
                     UInumButton.backgroundColor =  #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1);
                 }else if(modelNumButton.type=="opera"){
+                    UInumButton.backgroundColor =  #colorLiteral(red: 1, green: 0.5835773945, blue: 0, alpha: 1);
+                }else if (modelNumButton.text=="="){
                     UInumButton.backgroundColor =  #colorLiteral(red: 1, green: 0.5835773945, blue: 0, alpha: 1);
                 }else{
                     UInumButton.backgroundColor =  #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1);
