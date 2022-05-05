@@ -24,15 +24,38 @@ class Model{
     }
     
     func isLegal()->Bool{
+        if(!isNumber(text: caculationArray.first!)){
+            caculationArray.insert("0", at: 0)
+            Array2String(inputArray: caculationArray)
+        }
+        if(!isNumber(text: caculationArray.last!)){
+            caculationArray.removeLast()
+            Array2String(inputArray: caculationArray)
+        }
         return true
     }
-    func execute(){
+    func execute() -> String{
+        
         // if "=" button isclicked==true, remove all text in Caculation Label
         if(isLegal()){ // ensure caculation label isLeagal to execute
+            let caculation = caculationText
+            let expression = NSExpression(format: caculation)
+            let value = expression.expressionValue(with: nil, context: nil) as?Double
+            var result = Array(value!.description)
+            if(result.last=="0" && result[result.count-2]=="."){
+                result.removeLast()
+                result.removeLast()
+            }
+            
             caculationText = ""
             caculationArray.removeAll()
             setIsClicked(index: -1)
+            
+            
+            
+            return String(result)
         }
+        return "ERROR"
     }
     func setType(index : Int){
         let text = buttons[index].text
@@ -98,12 +121,37 @@ class Model{
             
     }
     func CheckOneDot(){
+       
         if(caculationArray.last == "."){
-            if(caculationArray.firstIndex(of: ".") != caculationArray.count-1){
-                //小數點在之前出現過
+            let lastDotIndex = caculationArray.count-1
+            caculationArray.removeLast()
+            
+            var secLastDotIndex : Int = -1
+            if(caculationArray.contains(".")){
+                secLastDotIndex = caculationArray.lastIndex(of: ".")!
+            }else{
+            }
+            caculationArray.append(".")
+            var lastNonNumIndex : Int = 0
+            
+            for index in caculationArray.indices{
+                if(!isNumber(text: caculationArray[caculationArray.count-1-index])){
+                    lastNonNumIndex = caculationArray.count-1-index
+                    break
+                }else{
+                }
+            }
+            if(lastDotIndex>lastNonNumIndex && secLastDotIndex<lastNonNumIndex){
+             // 檢查最後一點 和 倒數第二個點 中間 有符號 => 2.3+2.3
+            }else{
                 caculationArray.removeLast()
             }
+//            if(caculationArray.firstIndex(of: ".") != caculationArray.count-1){
+//                //小數點在之前出現過
+//                caculationArray.removeLast()
+//            }
         }
+        
         
     }
     func CheckFirstZero(){

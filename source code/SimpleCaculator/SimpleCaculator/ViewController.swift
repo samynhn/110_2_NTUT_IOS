@@ -46,6 +46,10 @@ class ViewController: UIViewController {
             sender.backgroundColor =  #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1);
         }
         
+        if(model.caculationText == ""){
+            Answer.text = ""
+        }
+        
         updateView()
         //##########
 //        Caculation.text = "";
@@ -89,11 +93,11 @@ class ViewController: UIViewController {
     
     
     @IBAction func execute(_ sender: Any) {
-        model.execute()
-        let _caculation = Caculation.text!
-        let expression = NSExpression(format: _caculation)
-        let value = expression.expressionValue(with: nil, context: nil) as?Int
-        Answer.text = value?.description
+        Answer.text = model.execute()
+//        let _caculation = Caculation.text!
+//        let expression = NSExpression(format: _caculation)
+//        let value = expression.expressionValue(with: nil, context: nil) as?Double
+//        Answer.text = value?.description
         
         updateView()
     }
